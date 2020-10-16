@@ -1,0 +1,101 @@
+@import "./../../_constants/color.scss";
+
+.title-bar {
+    position: relative;
+    height: 62px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: $color-3;
+    padding: 0px 15px;
+
+    font-size: 18px;
+
+    .title-text-main {
+        flex: 1 1;
+        font-size: 24px;
+        line-height: 62px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-align: center;
+        color: $color-1;
+    }
+
+    .title-options-holder {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        i {
+            cursor: pointer;
+            transition: all ease-in-out 300ms;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        i:hover {
+            color: $white;
+            background-color:rgba($color: $color-1, $alpha: 0.6);
+        }
+
+        .search-text {
+            width: 20%;
+            position: absolute;
+            right: 150px;
+            background: none;
+            outline: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid rgba($color: $color-1, $alpha: 0.6);
+            transition: all ease-in-out 300ms;
+            padding: 5px;
+        }
+
+        .search-text:hover, .search-text:active, .search-text:focus {
+            border-bottom: 2px solid rgba($color: $color-1, $alpha: 0.6);
+        }
+    }
+
+    .profile-menu {
+        position: absolute;
+        top: 50px;
+        right: 25px;
+        background: rgba($color: $white, $alpha: 0.8);
+        box-shadow: 0px 3px 6px #00000029;
+
+        ul {
+            list-style: none;
+            padding: 0px 5px;
+            margin: 0px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            line-height: 36px;
+            width: 220px;
+            padding: 5px 10px;
+            border-bottom: 1px solid rgba($color: $black, $alpha: 0.05);
+            transition: all ease-in-out 100ms;
+            cursor: pointer;
+        }
+
+        i {
+            padding: 0px;
+            margin-right: 10px;
+            transition: all ease-in-out 100ms;
+        }
+
+        li:hover {
+            color: $color-1;
+        }
+
+        li:last-child {
+            border-top: 1px solid rgba($color: $black, $alpha:0.1);
+        }
+    }
+}
