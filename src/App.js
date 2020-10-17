@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './_utils/FontAwesome';
 import HomePage from './_pages/HomePage/HomePage';
 
