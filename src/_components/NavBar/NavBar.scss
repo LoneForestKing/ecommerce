@@ -1,0 +1,61 @@
+@import "../../_constants/color.scss";
+@import "./../../_utils/bootstrap_mixins";
+
+.nav-bar {
+  height: 52px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 0rem 5rem;
+
+  .menu-item {
+    height: 100%;
+    line-height: 52px;
+    font-family: "Noto";
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    padding: 0rem 15px;
+    text-transform: uppercase;
+    transition: all ease-in-out 200ms;
+  }
+
+  .menu-item-hover {
+    text-shadow: 0 0 1px;
+    background: rgba($color: $white, $alpha: 0.6);
+  }
+
+  .menu-item-content {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 52px;
+    height: 150px;
+    text-shadow: none;
+    animation: grow 350ms;
+    background: rgba($color: $white, $alpha: 0.6);
+  }
+
+  @keyframes grow {
+    from {
+     height: 0px;
+    }
+    to {
+      height: 150px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .nav-bar {
+    padding: 0rem 1rem;
+
+    ::-webkit-scrollbar {
+      width: 1px;
+    }
+  }
+}

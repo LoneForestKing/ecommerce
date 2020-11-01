@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Collapse } from "react-bootstrap";
 
 import "./TitleBar.scss";
 
@@ -61,12 +62,13 @@ const TitleBar = (props) => {
         <i
           className="material-icons"
           onClick={() => showProfile(state.showProfile)}
-          // onMouseEnter={() => showProfile(false)}
+          onMouseEnter={() => showProfile(false)}
+          onMouseLeave={() => showProfile(true)}
         >
           perm_identity
         </i>
-        {state.showProfile ? (
-          <div className="profile-menu" onMouseLeave={() => showProfile(true)}>
+        <Collapse in={state.showProfile}>
+          <div className="profile-menu" onMouseEnter={() => showProfile(false)} onMouseLeave={() => showProfile(true)}>
             <ul>
               <li>
                 <i className="material-icons">account_circle</i>
@@ -86,9 +88,7 @@ const TitleBar = (props) => {
               </li>
             </ul>
           </div>
-        ) : (
-          ""
-        )}
+        </Collapse>
       </span>
     </div>
   );
