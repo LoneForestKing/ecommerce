@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import PropTypes from "prop-types";
 
 import "./NavBar.scss";
@@ -27,7 +26,7 @@ const NavBar = (props) => {
       <NavItems />
       {hoverItem !== "" ? (
         <div
-          className="menu-item-content"
+          className={"menu-item-content" + (hoverItem === "" ? "hide" : "")}
           onMouseEnter={() => setHoverItem(hoverItem)}
           onMouseLeave={() => setHoverItem("")}
         >

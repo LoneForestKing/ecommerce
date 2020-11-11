@@ -1,0 +1,91 @@
+[
+    {
+        "_id": "0",
+        "name": "Home",
+        "categories": [
+            {
+                "_id": "01",
+                "name":"Kitchen",
+                "img": null
+             }, {
+                "_id": "02",
+                "name":"Furnishing",
+                "img": null
+             }, {
+                "_id": "03",
+                "name":"Decor",
+                "img": null
+             }, {
+                "_id": "04",
+                "name":"Supplies",
+                "img": null
+             }
+            ]
+    }, {
+        "_id": "1",
+        "name": "Men",
+        "categories": [
+            {
+                "_id": "11",
+                "name":"Clothing",
+                "img": null
+             }, {
+                "_id": "12",
+                "name":"T-shirts & Polos",
+                "img": null
+             }, {
+                "_id": "13",
+                "name":"Shirts",
+                "img": null
+             }, {
+                "_id": "14",
+                "name":"Jeans",
+                "img": null
+             }, {
+                "_id": "15",
+                "name":"Innerwears",
+                "img": null
+             }
+            ]
+    }, {
+        "_id": "2",
+        "name": "Women",
+        "categories": [
+            {
+                "_id": "21",
+                "name":"Western Wear",
+                "img": null
+             }, {
+                "_id": "22",
+                "name":"Ethnic Wear",
+                "img": null
+             }, {
+                "_id": "23",
+                "name":"Lingerie",
+                "img": null
+             }, {
+                "_id": "24",
+                "name":"Nightwear",
+                "img": null
+             }
+            ]
+    }, {
+        "_id": "3",
+        "name": "Kids",
+        "categories": [
+            {
+                "_id": "31",
+                "name":"Fashion",
+                "img": null
+             }, {
+                "_id": "32",
+                "name":"Toys & Games",
+                "img": null
+             }, {
+                "_id": "33",
+                "name":"Skin & Grooming",
+                "img": null
+             }
+            ]
+    }
+]

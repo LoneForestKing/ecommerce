@@ -34,7 +34,7 @@
     width: 100%;
     left: 0px;
     top: 52px;
-    height: 150px;
+    height: 190px;
     text-shadow: none;
     animation: grow 350ms;
     background: rgba($color: $white, $alpha: 0.6);
@@ -45,7 +45,20 @@
      height: 0px;
     }
     to {
-      height: 150px;
+      height: 190px;
+    }
+  }
+
+  .hide {
+    animation: shrink 350ms;
+  }
+
+  @keyframes shrink {
+    from {
+     height: 150px;
+    }
+    to {
+      height: 0px;
     }
   }
 }

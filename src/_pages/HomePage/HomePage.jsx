@@ -7,15 +7,14 @@ import TitleBar from "../../_components/TitleBar/TitleBar";
 import "./HomePage.scss";
 
 export default function HomePage(props) {
-
-  const navs = ["Home", "Men", "Women", "Kids", "Accessories", "Decor"]
+  let navs = ["Home", "Men", "Women", "Kids", "Accessories"];
 
   return (
     <div className="home-screen">
       <TitleBar />
       <div className="fill-space">
         <div className="content">
-            <NavBar menuItems={navs} />
+          <NavBar menuItems={navs} />
         </div>
         <Footer />
       </div>
