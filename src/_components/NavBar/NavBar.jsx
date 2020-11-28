@@ -1,20 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import "./NavBar.scss";
+import { connect } from "react-redux";
+
+const mapStateToProps = (state) => {
+  return { selectedPage: state.selectedPage };
+};
 
 const NavBar = (props) => {
-  const [hoverItem, setHoverItem] = useState("");
-
-  const { menuItems } = props;
+  const { menuItems, onPageSelected, selectedPage } = props;
 
   const NavItems = () => {
     return menuItems.map((item) => (
       <div
         key={item}
-        className={"menu-item" + (hoverItem === item ? " menu-item-hover" : "")}
-        onMouseEnter={() => setHoverItem(item)}
-        onMouseLeave={() => setHoverItem("")}
+        className={
+          "menu-item" + (selectedPage === item ? " menu-item-hover" : "")
+        }
+        onMouseEnter={() => onPageSelected(item)}
+        onMouseLeave={() => onPageSelected("")}
       >
         {item}
       </div>
@@ -24,13 +29,13 @@ const NavBar = (props) => {
   return (
     <div className="nav-bar no-s">
       <NavItems />
-      {hoverItem !== "" ? (
+      {selectedPage !== "" ? (
         <div
-          className={"menu-item-content" + (hoverItem === "" ? "hide" : "")}
-          onMouseEnter={() => setHoverItem(hoverItem)}
-          onMouseLeave={() => setHoverItem("")}
+          className={"menu-item-content" + (selectedPage === "" ? "hide" : "")}
+          onMouseEnter={() => onPageSelected(selectedPage)}
+          onMouseLeave={() => onPageSelected("")}
         >
-          {hoverItem} is selected
+          {selectedPage} is selected
         </div>
       ) : (
         ""
@@ -43,4 +48,4 @@ NavBar.propTypes = {
   menuItems: PropTypes.array.isRequired,
 };
 
-export default NavBar;
+export default connect(mapStateToProps)(NavBar);
