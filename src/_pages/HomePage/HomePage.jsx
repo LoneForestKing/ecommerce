@@ -8,6 +8,8 @@ import TitleBar from "../../_components/TitleBar/TitleBar";
 
 import "./HomePage.scss";
 
+const navs = ["Home", "Men", "Women", "Kids", "Accessories"];
+
 function mapDispatchToProps(dispatch) {
   return {
     selectPage: page => dispatch(selectPage(page))
@@ -17,15 +19,19 @@ function mapDispatchToProps(dispatch) {
 class HomePage extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      selectedPage: navs[0]
+    };
   }
 
   onPageSelected = (page) => {
+    this.setState({
+      selectedPage: page
+    })
     this.props.selectPage(page);
   };
 
   render() {
-    let navs = ["Home", "Men", "Women", "Kids", "Accessories"];
 
     return (
       <div className="home-screen">
