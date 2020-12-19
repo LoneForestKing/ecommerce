@@ -26,18 +26,20 @@
 
   .menu-item-hover {
     text-shadow: 0 0 1px;
-    background: rgba($color: $white, $alpha: 0.6);
+    background: rgba($color: $white, $alpha: 0.9);
   }
 
   .menu-item-content {
     position: absolute;
     width: 100%;
     left: 0px;
-    top: 52px;
-    height: 190px;
+    top: 114px;
+    height: 200px;
     text-shadow: none;
     animation: grow 350ms;
-    background: rgba($color: $white, $alpha: 0.6);
+    background: rgba($color: $white, $alpha: 0.9);
+    box-shadow: 0 4px 8px 0 rgba($color: $color-1, $alpha: 0.2), 0 6px 20px 0 rgba($color: $color-1, $alpha: 0.19);
+    z-index: 99;
   }
 
   @keyframes grow {
@@ -45,7 +47,7 @@
      height: 0px;
     }
     to {
-      height: 190px;
+      height: 200px;
     }
   }
 
@@ -55,7 +57,7 @@
 
   @keyframes shrink {
     from {
-     height: 150px;
+     height: 200px;
     }
     to {
       height: 0px;

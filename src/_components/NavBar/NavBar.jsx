@@ -28,7 +28,7 @@ const NavBar = (props) => {
           fade: false,
           in: false,
         });
-      }, 350);
+      }, 300);
     }
   });
 

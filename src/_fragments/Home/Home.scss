@@ -1,0 +1,60 @@
+@import "./../../_utils/css/color.scss";
+@import "./../../_utils/css/bootstrap_mixins";
+
+.container-x {
+  .bill-board {
+    height: 550px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+    .carousel {
+      height: 450px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .bill-board-img {
+      height: 450px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .bill-board-caption {
+      height: 100%;
+      width: 60%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background: rgba($color: $white, $alpha: 0.8);
+      padding: 1em;
+
+      font-size: 36px;
+      font-weight: 900;
+      text-align: right;
+      text-transform: uppercase;
+      font-family: Poiret One;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .container-x {
+    .bill-board {
+      height: 350px;
+      .carousel {
+        height: 350px;
+      }
+      .bill-board-img {
+        height: 350px;
+        background-size: 200% 100%;
+      }
+      .bill-board-caption {
+        width: 100%;
+      }
+    }
+  }
+}
